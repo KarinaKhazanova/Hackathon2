@@ -31,7 +31,8 @@ def game():
     while True:
         print(DRAW[draw_position])
         if draw_position == tries - 1:
-            print(f"LOSE. The answer was {word}")
+            w = "".join(word)
+            print(f"LOSE. The answer was {w}")
             return
         print(f"The word is {answer}")
         symbol = get_symbol(word, answer)
@@ -43,8 +44,9 @@ def game():
         word[word.index(symbol)] = "_"
 
         if answer.count("_") == 0:
+            a = "".join(answer)
             print(f"The word is : {answer}")
-            print("WIN")
+            print(f"WIN. The answer is {a}")
             return
 
 
