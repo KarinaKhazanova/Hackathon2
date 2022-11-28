@@ -1,8 +1,10 @@
 import random
 
 from data import DRAW
+from functools import reduce
 
-WORDS = ["elephant", "giraffe", "zebra", "hippopotamus", "hyena", "deer", "monkey", "racoon"]
+WORDS = ["elephant", "giraffe", "tiger", "wolf", "kangaroo", "sheep", "zebra", "hippopotamus", "hyena", "deer", "monkey", "racoon"]
+
 
 
 def get_word(words=WORDS):
@@ -23,11 +25,13 @@ def game():
     answer[-1] = word[-1]
     draw_position = 0
     tries = len(DRAW)
+    
+    
 
     while True:
         print(DRAW[draw_position])
         if draw_position == tries - 1:
-            print("LOSE")
+            print(f"LOSE. The answer was {word}")
             return
         print(f"The word is {answer}")
         symbol = get_symbol(word, answer)
@@ -46,7 +50,7 @@ def game():
 
 def start_game():
     while True:
-        answer = input("Do you want to start the game? Y or N\n")
+        answer = input("Guess the animal. Do you want to start the game? Y or N\n")
         if answer == "Y":
             game()
         else:
