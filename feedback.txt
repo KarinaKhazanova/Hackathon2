@@ -1,0 +1,8 @@
+Hello Karina this is the hackaton feedback. I like the hangman game it is a nice project to do. Maybe you could had use
+the open method with files or an api to introduce infinite words in to your project. You even have an example in the 
+classes working with anagrams where you could download a file full of words. Then if the word have two times 
+the same letter i have to select the letter two times also and that is not a  normal behave for a hangman game. 
+You can also show the user all the letters he already selected as incorrect after every turn. Your game is ok but
+i would expect a  more advanced solution for a hangman project. 
+
+Thanks for sharing your project and keep coding.
